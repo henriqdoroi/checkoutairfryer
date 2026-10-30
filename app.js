@@ -345,6 +345,13 @@ function beginCheckout(input = { productId: product?.id, voltage: selectedVoltag
   checkoutUrl.searchParams.set("cep", postalCode);
   const requestedQuantity = Number(input.quantity);
   checkoutUrl.searchParams.set("quantity", String(Number.isInteger(requestedQuantity) ? Math.max(1, Math.min(15, requestedQuantity)) : 1));
+  const passthroughKeys = new Set(["src", "sck", "xcod", "subid", ...Array.from({ length: 10 }, (_, index) => "subid" + (index + 1))]);
+  for (const [key, value] of new URLSearchParams(window.location.search)) {
+    const normalizedKey = key.toLowerCase();
+    if (normalizedKey.startsWith("utm_") || passthroughKeys.has(normalizedKey)) {
+      checkoutUrl.searchParams.set(normalizedKey, value.slice(0, 200));
+    }
+  }
   window.location.assign(checkoutUrl.toString());
 }
 
