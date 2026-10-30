@@ -1,3 +1,6 @@
+:root {
+  --font-inter: "Inter";
+}
 *,
 *::before,
 *::after {

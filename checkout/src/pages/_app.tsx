@@ -1,12 +1,10 @@
 import "@/styles/globals.css";
 import type { AppProps } from "next/app";
 import Head from "next/head";
-import { Inter } from "next/font/google";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
 import { Toaster } from "sonner";
 
-const inter = Inter({ subsets: ["latin"], weight: ["400", "500", "600", "700"], variable: "--font-inter", display: "swap" });
 const META_PIXEL_ID = "1631442295142660";
 const UTMIFY_PIXEL_ID = "6ae40cf0387b195022d0ee0d";
 
@@ -72,10 +70,13 @@ export default function App({ Component, pageProps }: AppProps) {
   }, [router.events]);
 
   return (
-    <div className={inter.variable}>
+    <div>
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
         <meta name="robots" content="noindex" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" />
       </Head>
       <noscript>
         <img height="1" width="1" style={{ display: "none" }} src="https://www.facebook.com/tr?id=1631442295142660&ev=PageView&noscript=1" alt="" />
