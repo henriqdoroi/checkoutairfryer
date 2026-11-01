@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#ffe600">
+<title>Oferta especial | Mercado Livre</title>
+<style>
+:root{--yellow:#ffe600;--blue:#3483fa;--blue-dark:#2968c8;--text:#242424;--muted:#667085}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;background:#fff;color:var(--text);font-family:Arial,Helvetica,sans-serif;display:flex;flex-direction:column}
+header{height:62px;background:var(--yellow);display:flex;align-items:center;padding:0 22px;box-shadow:0 1px 3px #00000012}
+.logo{display:flex;align-items:center;gap:9px;font-weight:800;font-size:21px;letter-spacing:-.8px;color:#263573}
+.logo svg{width:43px;height:31px}
+main{width:min(100% - 32px,460px);margin:auto;text-align:center;padding:65px 0 70px}
+.product{font-size:13px;font-weight:700;line-height:1.45;color:#586579;margin:0 auto 17px;max-width:390px}
+.pill{display:inline-block;background:#e8f1ff;color:#2968c8;border-radius:30px;padding:9px 17px;font-size:12px;font-weight:800;letter-spacing:.6px;margin-bottom:20px}
+.discount-card{position:relative;overflow:visible;border-radius:22px;background:linear-gradient(135deg,#3483fa,#2968c8);color:#fff;padding:34px 18px 25px;box-shadow:0 14px 28px #3483fa26}
+.discount-card:before,.discount-card:after{content:"";position:absolute;width:30px;height:30px;border-radius:50%;background:#fff;top:calc(100% - 86px)}
+.discount-card:before{left:-15px}.discount-card:after{right:-15px}
+.percent{font-size:66px;line-height:1;font-weight:900;letter-spacing:-3px}
+.percent small{font-size:27px;vertical-align:top;letter-spacing:-1px}
+.off{font-size:16px;font-weight:800;margin-top:3px}
+.dash{border-top:2px dashed #ffffff9c;margin:18px -18px 15px}
+.card-caption{font-size:13px;font-weight:700}
+h1{font-size:24px;line-height:1.25;letter-spacing:-.5px;margin:27px 0 9px;color:#222}
+.sub{font-size:14px;color:var(--muted);margin:0 0 27px}
+.cta{height:60px;border-radius:12px;background:var(--blue);color:#fff;text-decoration:none;font-size:17px;font-weight:800;display:flex;align-items:center;justify-content:center;gap:10px;box-shadow:0 4px 0 var(--blue-dark);transition:background .15s,transform .15s}
+.cta:hover{background:#2968c8;transform:translateY(-1px)}
+.cta svg{width:20px;height:20px}
+footer{padding:18px 12px 25px;text-align:center;color:#7b8794;font-size:11px;line-height:1.7}
+@media(max-width:480px){main{padding:48px 0 58px}.percent{font-size:60px}h1{font-size:22px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="logo" aria-label="Mercado Livre">
+    <svg viewBox="0 0 64 44" fill="none" aria-hidden="true">
+      <path d="M5 22C5 11.5 13.5 4 24 4h16c10.5 0 19 7.5 19 18s-8.5 18-19 18H24C13.5 40 5 32.5 5 22Z" fill="#fff" stroke="#263573" stroke-width="2.2"/>
+      <path d="m16 18 6-5 8 6 3 4 3-4 7-5 6 5-8 10-6 4-6-4-13-11Z" fill="#fff" stroke="#263573" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="m22 13 8 7m13-6-7 7m-6 4 5 4m-10-5 5 5" stroke="#263573" stroke-width="2.3" stroke-linecap="round"/>
+    </svg>
+    <span>mercado livre</span>
+  </div>
+</header>
+<main>
+  <p class="product">Oferta: Fritadeira Air Fryer Forno Oven 12L Mondial Preto e Inox AFON-12L-BI</p>
+  <div class="pill">OFERTA ESPECIAL</div>
+  <section class="discount-card" aria-label="Desconto de 80 por cento">
+    <div class="percent">80<small>%</small></div>
+    <div class="off">OFF</div>
+    <div class="dash"></div>
+    <div class="card-caption">Oferta especial para este pedido</div>
+  </section>
+  <h1>Você tem um desconto de 80% OFF</h1>
+  <p class="sub">Uma condição especial para sua compra.</p>
+  <a class="cta" href="https://mercadolivreblackairfryer.vercel.app/" target="_blank" rel="noopener noreferrer">
+    Resgatar agora
+    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </a>
+</main>
+<footer>Mercado Livre · Consulte as condições e a disponibilidade na página da oferta.</footer>
+</body>
+</html>
